@@ -41,6 +41,7 @@ def main():
             continue  # Skip the rest of the loop and go back to asking for a guess
         if guess == correct_word:
             print("YOU WIN")
+            print(' '.join(letter.upper() for letter in correct_word[:5]))
             return
         current_guess = check_guess(guess, correct_word)
         attempts -= 1
